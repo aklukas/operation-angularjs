@@ -1,0 +1,30 @@
+<navbar></navbar>
+<div class="container wrapper">
+  <div class="content-left">
+    <h3>Developers</h3>
+    <ul ng-repeat="dev in $ctrl.developers">
+      <li class="user-list" ng-click="$ctrl.selectedDev(dev)">
+        {{dev.name}}
+        <button type="button" ng-click="$ctrl.deleteDev(dev.id)" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="content-right">
+    <form ng-blur="$ctrl.resetForm()" ng-submit="$ctrl.saveDev($ctrl.form)">
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <input id="inputName" class="form-control" type="text" placeholder="Name" ng-model="$ctrl.form.name">
+      </div>
+      <div class="form-group">
+        <label for="inputRepo">Repo</label>
+        <input id="inputRepo" class="form-control" type="text" placeholder="Name" ng-model="$ctrl.form.repo">
+      </div>
+      <button ng-if="$ctrl.form.id" class="btn btn-primary" type="submit">Save</button>
+      <button ng-if="!$ctrl.form.id" class="btn btn-primary" type="submit">Create</button>
+      <button class="btn btn-primary" type="button" ng-click="$ctrl.resetForm()">Cancel</button>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+@import "../../common/common";
+
+.home {
+  color: red;
+}
+
+.user-list {
+  &:hover {
+    cursor: pointer;
+    color: $lightTextColor;
+    font-size: $largeText;
+  }
+}

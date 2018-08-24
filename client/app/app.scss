@@ -1,0 +1,23 @@
+@import "common/common";
+
+.app {
+  height: 100vh;
+  background: -webkit-linear-gradient(150deg, whitesmoke 0%, hsl(0, 0%, 60%) 90%) no-repeat fixed;
+}
+
+.wrapper {
+  display: grid;
+  margin-top: 20px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+}
+
+.content-left {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+.content-right {
+  grid-column: 2/3;
+  grid-row: 1;
+}

@@ -1,0 +1,13 @@
+@import '../common';
+
+.white-header {
+  color: $lightTextColor !important;
+  font-size: 1.6rem;
+}
+
+.navbar {
+  margin-bottom: 0;
+  height: 50px;
+  min-height: 0;
+  border-radius: 0;
+}
