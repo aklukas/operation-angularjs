@@ -11,3 +11,12 @@
     font-size: $largeText;
   }
 }
+
+.project-list {
+  margin-top: 25px;
+  border: 2px solid white;
+  border-radius: 15px;
+  & ul {
+    margin-top: 10px;
+  }
+}

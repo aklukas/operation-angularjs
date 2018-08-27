@@ -25,6 +25,11 @@
       <button ng-if="!$ctrl.form.id" class="btn btn-primary" type="submit">Create</button>
       <button class="btn btn-primary" type="button" ng-click="$ctrl.resetForm()">Cancel</button>
     </form>
+    <div ng-if="$ctrl.form.id" class="project-list">
+      <ul ng-repeat="project in $ctrl.projects">
+        <li>{{project.name}}</li>
+      </ul>
+    </div>
   </div>
 </div>
 
